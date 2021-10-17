@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="login_form" (submit)="onSubmit()"> 
+
+    <div class="form-group" [ngClass]="displayFieldCss('email')">
+        <p>E-Mail</p>
+        <input formControlName="email" type="email" id="email">
+        <error-display [displayError]="isFieldValid('email')" errorMsg="Email non valida"></error-display>
+    </div>
+
+    <div class="form-group" [ngClass]="displayFieldCss('password')">
+        <p>Password</p>
+        <input formControlName="password" type="password" id="password">
+        <error-display [displayError]="isFieldValid('password')" errorMsg="Password non valida"></error-display>
+    </div>
+
+    <div class="form-group" id="genderfield"[ngClass]="displayFieldCss('gender')">
+        <p>Sesso</p>
+        <input type="radio" class="gender" value='Male' name="gender" formControlName="gender"><label>Uomo</label>
+        <input type="radio" class="gender" value='Female' name="gender" formControlName="gender"><label>Donna</label>
+        <error-display [displayError]="isFieldValid('gender')" errorMsg="Inserisci il tuo sesso"></error-display>
+    </div>
+    
+    <div class="form-group" [ngClass]="displayFieldCss('province')">
+        <p>Provincia di residenza</p>
+        <select class="form-control" (change)="changeCity($event)" formControlName="province" id="province">
+            <option value="">Seleziona la tua provincia</option>
+            <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+         </select>
+        <error-display [displayError]="isFieldValid('province')" errorMsg="Seleziona una provincia"></error-display>
+    </div>
+
+     <button type="submit"id="submitbtn">Accedi</button>
+
+</form>

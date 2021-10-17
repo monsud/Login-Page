@@ -1,0 +1,71 @@
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+input {
+    height: 60%;
+    width: 90%;
+}
+
+button {
+    height: 5%;
+    width: 20%;
+}
+
+input {
+    background-color: #1d2d4f;
+    border: 0.5px solid #f8dbb6;
+    color: #f8dbb6;
+}
+
+body {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+
+p,label {
+    color: #f8dbb6;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+button {
+    background-color: #f8dbb6;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    color: #1d2d4f;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form {
+    height: 20%;
+    width: 50%;
+}
+
+.block {
+    display: block;
+}
+
+#genderfield {
+    display: block;
+    flex-wrap: initial;
+    width: 21%;
+}
+
+.gender {
+    height: 20% !important;
+    width: 20% !important;
+    font-size: 16px;
+}
